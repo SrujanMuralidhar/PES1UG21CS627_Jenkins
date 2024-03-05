@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    writeFile file: 'temp.cpp', text: '#include <iostream>\nint main() { std::cout << "PES1UG21CS627\n"; return 0; }'
                     sh 'g++ -o PES1UG21CS627 temp.cpp'
                 }
             }
